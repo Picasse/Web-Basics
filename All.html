@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación v1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #f8f8f2;
+            font-family: Arial, sans-serif;
+        }
+        pre {
+            background: #282a36;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pos {
+            background: #282a36;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+    <h1>Tipos de datos</h1>
+        <ul>
+            <li><a href="#tema1">Var vs Let</a></li>
+            <li><a href="#tema2">Tema 2</a></li>
+            <li><a href="#tema3">Tema 3</a></li>
+            <li><a href="#tema4">Tema 4</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <h2 id="#tema1">Var vs Let</h2>
+        <p>Ambos son para declarar variables
+           Var: Contexto de funcion
+           Let: Contexto de bloque, se contiene en el bloque
+        </p>
+        <pre><code class="javascript">Var dato = 4</code></pre>
+        <p>Salida en consola:</p>
+        <pos><code>valor: 4</code></pos>
+        <pre><code class="javascript">
+    
+            console.log("Var antes del bloque")
+            var variable=10
+            console.log("valor: "+variable)
+    
+            //BLOQUE DE CODIGO, HECHO POR LLAVES
+            {
+                console.log("Var en el bloque")
+                var valor=20
+                console.log("valor: "+variable) 
+            }
+    
+            console.log("Var despues del bloque")
+            //var valor=10
+            console.log("valor: "+variable) 
+        </code></pre>
+    </div>
+    
+
+
+<script>
+    console.log("*********VAR********************")
+    
+    console.log("Var antes del bloque")
+    var variable=10
+    console.log("valor: "+variable) 
+
+    //un bloque
+    {
+    console.log("Var en el bloque")
+    var variable=20
+    console.log("valor: "+variable) 
+    }
+
+    console.log("Var despues del bloque")
+    //var variable=10
+    console.log("valor: "+variable) 
+</script>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test del javacript</title>
+</head>
+<body>
+    <script>
+        //Objetivo: Comparar si var & let cambian el valor antes/dentro/despues
+        //           de un bloque
+        //*********VAR********************
+        //Sigue la logica clasica de programacion sequencial
+        console.log("*********VAR********************")
+
+        console.log("Var antes del bloque")
+        var variable=10
+        console.log("valor: "+variable) 
+
+        //un bloque
+        {
+        console.log("Var en el bloque")
+        var variable=20
+        console.log("valor: "+variable) 
+        }
+
+        console.log("Var despues del bloque")
+        //var variable=10
+        console.log("valor: "+variable) 
+/*
+Declaración Inicial: Se declara variable con var 
+y se le asigna el valor 10. 
+El primer console.log muestra este valor.
+
+Dentro del Bloque: Dentro del bloque 
+(las llaves {}), se vuelve a declarar variable 
+con var y se le asigna 20. Debido a que var tiene 
+un scope de función (o global si está fuera 
+de cualquier función), esta declaración 
+sobrescribe la variable variable original.
+
+Después del Bloque: Fuera del bloque, cuando 
+se imprime variable, muestra 20, ya que la 
+declaración dentro del bloque ha modificado 
+el mismo variable que se había definido antes.
+*/
+        //*********LET********************
+        //Let se maneja solo en el contexto del bloque en el que está contenido
+        console.log("*********LET********************")
+
+        console.log("let antes del bloque")
+        let variable2=10
+        console.log("valor: "+variable2) 
+
+        //un bloque
+        {
+        console.log("let en el bloque")
+        let variable2=20//es como si este let fuera de un universo paral
+        console.log("valor: "+variable2) 
+        }
+
+        console.log("let despues del bloque")
+        console.log("valor: "+variable2) 
+
+/*
+Declaración Inicial: Se declara variable2 con let 
+y se le asigna el valor 10. 
+Este valor se imprime.
+
+Dentro del Bloque: En el bloque, se declara una 
+nueva variable variable2 (con let). Esta nueva 
+declaración es independiente de la variable2 
+fuera del bloque. Así que aquí se imprime 20, 
+pero solo afecta a esta nueva variable.
+
+Después del Bloque: Fuera del bloque, cuando se 
+imprime variable2, muestra 10, ya que la variable 
+del bloque no afecta a la variable definida antes.
+*/
+
+
+/* CONCLUSION:
+var: Tiene un alcance funcional o global y las 
+variables pueden ser sobrescritas dentro de 
+bloques. Esto significa que si declaras una 
+variable con var dentro de un bloque, en 
+realidad estás afectando la variable externa.
+
+let: Tiene un alcance de bloque, por lo que 
+cualquier declaración de let dentro de un bloque 
+es independiente de las variables declaradas 
+fuera de ese bloque.
+*/
+
+
+
+        const objeto ={
+            nombre:"joel",
+            edad:50
+        }
+
+        objeto.trabajo="verdulero"
+        console.log(objeto)
+    </script>
+    
+</body>
+</html>

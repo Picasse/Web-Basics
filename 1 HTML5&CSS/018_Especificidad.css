@@ -1,0 +1,45 @@
+h1{/*La etiqueta tiene el menor peso entre todos*/
+    color: blue;
+
+}
+h1{/*Este color sobreescribe al azul anterior, porque se hace despues jaja*/
+    color: green;
+}
+
+.h1-clase{/*La clase tiene mayor peso que la etiqueta y por eso queda de amarillo*/
+    color: yellow;
+}
+#h1-id{/*El id se aplica porque tiene mayor peso que la clase y la etiqueta*/
+    color: darksalmon;
+}
+p{
+    color: red;
+}
+/*Esto hace la funcion de and, debe ser h1, debe tener h1-id como id
+    y h1-clase como clase, por lo cual es más especifico*/
+h1#h1-id.h1-clase{/*Tiene una especificidad superior porque aplica id+clase=2*/
+    color: crimson;
+}
+h1{/*Evitar el uso del important*/
+    color: blueviolet !important;/*Este es el que tiene mayor peso, 
+                                            por eso es el que se aplica*/
+}
+/*
+Ya el caso de important con clase o importante con id,
+    obviamante prevalece el del id, porque tiene mayor peso (Especificidad)
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+

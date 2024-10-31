@@ -1,0 +1,19 @@
+.p-contenedor{
+    color: green;
+}
+/*////ANIDACION DE SELECTORES (+presicion/+ahorrar codigo)/////////*/
+/*dentro de body... 
+    ...vamos a buscar la section con clase main
+        ... y dentro de esa clase, buscamos todos los elementos de clase contenedor
+            ... y de todos estos, afecte a los p.
+                ...*/
+body section.main .contenedor p{/*Afecte a los P de la clase contenedor, 
+                                    así de facil es esto jaj*/
+    color: green;
+}
+
+.contenedor #boton-contenedor{/*Buscando dentro del contenedor, el boton con el id
+                                    boton-contenedor*/
+    background-color: yellow;
+}
+

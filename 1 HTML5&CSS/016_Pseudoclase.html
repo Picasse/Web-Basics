@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclase</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .hover{
+            width: 300px;
+            height: 100px;
+            background-color: red;
+        }
+        .hover:hover{/*Se activa en cuanto el raton pasa por encima*/
+            background-color: blue;
+        }
+        .listado{
+            padding: 15px;
+            background-color: turquoise;
+        }
+        /*...todos los p que sean el primer hijo de la clase listado*/
+        .listado p:first-child{
+            color: white;
+        }
+        /*Referenciamos a todos los enlaces que hayan en la pagina jaja*/
+        a:link{ /*Link no visitado todavia*/
+            color: deeppink;
+        }
+        a:visited{/*Los links visitados de color crimson*/
+            color: crimson;
+        }
+        a:hover{/*Cuando pase el mouse por encima; hace esto: */
+            color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hover">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aliquam voluptatum provident placeat possimus! Error in ipsam, quo debitis sint iste optio, libero molestias nisi, ea veritatis dolorum distinctio reiciendis!</p>
+
+    </div>
+
+
+    <div class="listado">
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p>Parrafo 3</p>
+    </div>
+
+    <!--Asie asie mi compa, vamo a modificar los estilos de los jodidos enlaces-->
+    <div class="enlaces">
+        <a href="http://google.com" target="_blank">Enlace de google</a>
+        <a href="http://marca.com" target="_blank">Enlace de tienda</a>
+        <!--El -blank es para que cuando clickees no abandones la pagina, si no
+                que se abra en otra ventana juas juas jaja
+                    i like it!-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

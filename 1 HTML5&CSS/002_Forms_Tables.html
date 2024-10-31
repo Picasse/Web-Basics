@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formularios</title>
+    </head>
+    <body>
+        <!--We use the form markup for reading user data-->
+        <form action="002_resultados.html" method="GET">
+            <!--Usernames & Passwords-->
+            <!--We put a label and we connect the label with the input-->
+            <!--Now when the user click the label automatizally put the textfield-->
+            <p>USING DIV</p>
+            <div><!--USERNAME-->
+                <label for="username1">Username: </label>
+                <Input type="text" id="username1" name="username1" required>
+                <!--Required is a validation for not sending void values-->
+            </div>
+            
+            <div><!--PASS-->
+                <label for="pass1">Password: </label>
+                <input type="password" id="pass1" name="pass1" required>
+                <!--El tipo Password no es seguro al 100%
+                1. Abrir con el navegador el html
+                2. Cambiar type="password" por type="text" -->
+            </div>
+
+            <div><!--AGE-->
+                <label for="age1">Age user</label>
+                <input type="number" id="age1" name="age1" min="0" max="100" step="1">
+                <!--The number type generates 2 boxes por up or down the number
+                    Also suports ranges min & maz & counting step,
+                    You can use the keyboard arrows up/down for increase/decrease the number
+                    You need to be careful with the step because this set the values supported
+                    Eg. min="0" max="100" step="10", textfiald can only receive 0,10,20
+                    but cant receive 11,9,23,55,4,99 etc...   -->
+            </div>
+
+            <div><!--DATE-->
+                <label for="date1">Date time</label>
+                <input type="date" id="date1" name="date1">
+                <!--When the input is type date, it generate a useful calendar-->
+            </div>
+
+            <div>
+                <label for="">Comments</label>
+                <textarea name="comment1" id="comment1" cols="30" rows="10"></textarea>
+            </div>
+
+            <!-- We send via GET to our page 002_resultados.html via URL as follows: -->
+            <!-- Fill the fields, then click the button and the URL will show: -->
+            <!-- http://127.0.0.1:5500/resultados.html?username1=sebas&pass1=12345&comment1=hola-->
+            <!--http://127.0.0.1:5500/002_resultados.html?username1=4&pass1=4&age1=45&date1=0111-11-11&comment1=DFDV-->
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+
+            
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

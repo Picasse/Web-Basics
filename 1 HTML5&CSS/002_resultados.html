@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resultados</title>
+    </head>
+    <body>
+        <h1>Aqui se mostrarán los resultados</h1>
+        <div id="resultados"></div>
+        <a href="/002_Forms_Tables.html">Volver</a>
+
+    </body>
+
+    <script>
+        const resDiv = document.getElementById("resultados")
+        new URLSearchParams(window.location.search).forEach((val,name)=>{
+            resDiv.append(`${name}: ${val}`)
+            resDiv.append(document.createElement('br'))
+        })
+
+        const resDivv = document.getElementById("resultados");
+        new URLSearchParams(window.location.search).forEach((val,name)=>{
+            resDiv.append(`${name}: ${val}`)
+            resDiv.append(document.createElement('br'))
+        })
+    </script>
+</html>

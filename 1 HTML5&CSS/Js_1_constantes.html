@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantes</title>
+</head>
+<body>
+    
+    <script>
+        //Cosntantes
+        /*No se puede llamar a una variable y a una funcion con el mismo nombre*/
+
+
+        /*
+        Archivos:   snake_case:                      mi_archivo_javascript.js
+        Constantes: UPPER_CASE:                      MI_CONSTANTE
+        Clases:     UpperCamelCase/PascalCase:       MiClase
+        Objetos/Primitivos/Funciones/Instancias:     lowerCamelCase
+        */
+
+        //Ambito global
+        var MI_VARIABLE = 'Hola soy una variable global';
+        console.log(MI_VARIABLE);
+        
+        //Ambito de bloque
+        if(true){
+            let MI_VARIABLE_2 = 'Hola soy una variable que solo vive en este bloque';
+            console.log(MI_VARIABLE_2);
+        }
+
+        console.log("1"+1);
+
+
+        function tieneRepetidos(arreglo) {
+    var elementosVistos = {};
+
+    for (var i = 0; i < arreglo.length; i++) {
+        if (elementosVistos[arreglo[i]] !== undefined) {
+            return true; // Si encontramos un elemento repetido, devolvemos true
+        } else {
+            elementosVistos[arreglo[i]] = true;
+        }
+    }
+    return false; // Si no encontramos elementos repetidos, devolvemos false
+}
+
+// Ejemplo de uso
+var arreglo1 = [1, 2, 3, 4, 5];
+var arreglo2 = [1, 2, 3, 4, 5, 1];
+var arreglo3 = ["a", "b", "c", "d"];
+var arreglo4 = ["a", "b", "c", "d", "a"];
+
+console.log(tieneRepetidos(arreglo1)); // Devuelve false
+console.log(tieneRepetidos(arreglo2)); // Devuelve true
+console.log(tieneRepetidos(arreglo3)); // Devuelve false
+console.log(tieneRepetidos(arreglo4)); // Devuelve true
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

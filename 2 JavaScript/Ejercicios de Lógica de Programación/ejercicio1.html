@@ -1,0 +1,190 @@
+<!--
+Creo que la cague en los metodos constructores
+1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+    <script>
+
+    console.log("Ejercicio 1")
+    //  Ejercicio 1:
+    //  Programa una función que cuente el número de caracteres de una cadena
+    //  de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+    class ClasePadre{//SIEMPRE EN MAYUSCULAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        //Constructor
+        //constructor(cadena){this.cadena=cadena;}
+        //Metodo
+        miFuncion(cadena){
+            //console.log("in the function")
+            //console.log(typeof(cadena));
+            if(typeof(cadena)==="string"){
+                //console.log("in the if")
+                console.log("La longitud del string es: ",cadena.length)
+            }else{console.log("No es string")}
+        }
+    }
+    cadDeTexto="Hola Mundo"
+    const pe = new ClasePadre()
+    pe. miFuncion(cadDeTexto)
+
+
+    console.log("Ejercicio 2")
+    //  Ejercicio 2:
+    //  Programa una función que te devuelva el texto recortado 
+    //  según el número de caracteres indicados, 
+    //  pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+    class ClaseHija extends ClasePadre{
+        //constructor
+        //con el metodo super() se manda llamar el constructor de la clase padre
+        //constructor(cadena,num){super(cadena);this.num=num;}
+        //metodo
+        miFuncion(cadena,num){
+            if((typeof(cadena)==="string")&&(typeof(num)==="number")){
+                console.log(cadena.substring(0, num))
+            }else{console.log("Ingrese un String y un numero")}
+        }
+    }
+    const pe2 = new ClaseHija()
+    pe2. miFuncion(cadDeTexto,4)
+
+
+    console.log("Ejercicio 3")
+    //  Ejercicio 3:
+    //  Programa una función que dada una String te devuelva 
+    //  un Array de textos separados por cierto caracter, 
+    //  pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+    class ClaseHija3 extends ClasePadre{
+        //constructor
+        //con el metodo super() se manda llamar el constructor de la clase padre
+        //constructor(cadena,simbolo){super(cadena);this.simbolo=simbolo;}
+        //metodo
+        miFuncion(cadena,simbolo){
+            if((typeof(cadena)==="string")&&(typeof(simbolo)==="string")){
+                const arreglo=cadena.split(simbolo)
+                console.log(arreglo)
+            }else{console.log("Ingrese un String y un String")}
+        }
+    }
+    const pe3 = new ClaseHija3()
+    pe3. miFuncion('hola que tal',' ')
+
+
+    console.log("Ejercicio 4")
+    //  Ejercicio 4:
+    //  Programa una función que repita un texto X veces, 
+    //  pe. miFuncion('Hola Mundo', 3) 
+    //  devolverá Hola Mundo Hola Mundo Hola Mundo.
+    class ClaseHija4 extends ClasePadre{
+        //constructor
+        //con el metodo super() se manda llamar el constructor de la clase padre
+        //constructor(cadena,num2){super(cadena);this.num2=num2;}
+        //metodo
+        miFuncion(cadena,num2){
+            if((typeof(num2)==="number")){
+                for(let i=0;i<num2;i++){console.log(cadena)}
+            }else{console.log("Ingrese un String y un Number")}
+        }
+    }
+    const pe4 = new ClaseHija4()
+    pe4. miFuncion('hola que tal',3)
+
+
+//////////////////////////PRACTICANDO///////////////////////////////////
+//Funcion para contar caracteres de una cadena de texto:
+let str="hola jajajaaj"
+//str=4
+
+//forma 1: Funciones/Ternaria o If /
+function contar1(cadena){
+    (typeof(cadena)==="string")
+    ?console.info(`1 La cadena: "${cadena}" tiene: "${cadena.length}" caracteres`)//comprueba que es string y todo en "" o todo en ''
+    :console.warn("Datos erroneos");
+}
+contar1(str);
+
+//forma 2: ArrowFunctions/Ternaria o If /
+const contar2 = (cadena)=>{
+    (typeof(cadena)==="string")
+    ?console.info(`2 La cadena: "${cadena}" tiene: "${cadena.length}" caracteres`)//comprueba que es string y todo en "" o todo en ''
+    :console.warn("Datos erroneos");
+}
+contar2(str);
+
+//forma 3: Clases/Ternaria o If /
+class Clase3{
+    //constructor
+    //constructor(nombre="",edad=0,novia=""){this.nombre=nombre, this.edad=edad}
+    //atributos
+    nombre="Sebas";
+    edad=25;
+    novia="jaja"
+    //metodo
+    contar3(cadena){
+        (cadena)
+        ?console.info(`3 La cadena: "${cadena}" tiene: "${cadena.length}" caracteres`)//comprueba que es string y todo en "" o todo en ''
+        :console.warn("Datos erroneos");
+    }
+}
+obj3 = new Clase3()
+obj3.contar3(str)
+
+yo = new Clase3()
+
+//////////////////////////END_PRACTICANDO///////////////////////////////////
+
+    </script>
+    <style>
+      * {
+        margin: 0; /* Elimina el margen predeterminado */
+        padding: 0; /* Elimina el padding predeterminado */
+        box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+      }
+      h1 {
+        font-family: "Courier New", Courier, monospace;
+        align-self: start;
+        text-shadow: 1px 0.1px 0.8px;
+      }
+      li {
+        font-family: "Courier New", Courier, monospace;
+        font-size: small;
+        list-style-type: none;
+        background-color: #ebe;
+        margin: 1%;
+        padding: 5%;
+        border-radius: 8%;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 1</h1>
+    <ul>
+      <li>
+        1) Programa una función que cuente el número de caracteres de una cadena
+        de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+      </li>
+      <li>
+        2) Programa una función que te devuelva el texto recortado según el
+        número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá
+        "Hola".
+      </li>
+      <li>
+        3) Programa una función que dada una String te devuelva un Array de
+        textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ')
+        devolverá ['hola', 'que', 'tal'].
+      </li>
+      <li>
+        4) Programa una función que repita un texto X veces, pe. miFuncion('Hola
+        Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+      </li>
+    </ul>
+  </body>
+</html>

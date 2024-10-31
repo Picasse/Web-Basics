@@ -1,0 +1,84 @@
+.colores{
+    color-he B26E63;
+    font-size: 40px;
+    /*
+    background-color: #ff0000;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000000;
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 10px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    */
+
+
+}
+
+.color-hexadecimal{
+    color: #B26E63;
+    font-size: 40px;
+
+}
+
+.color-rgb{
+    color: rgb(243, 12, 255);
+    font-size: 40px;
+
+}
+
+.color-rgba{
+    color: rgba(243, 12, 255, 0.3); /*El cuarto parametro es opacidad {0=nada/2=full}*/
+    font-size: 40px;
+
+}
+
+/*Fondos*/
+.fondo{/*Usando un link online*/
+    /*background-color: cornflowerblue;*/
+    background-image: url("https://i.pinimg.com/736x/b8/56/0a/b8560a731b46f6b78d9703ce2afa7cc5.jpg") 
+    ;
+}
+
+.fondo-interno{/*Citando directamente desde un directorio en el servidor*/
+    color: white;
+    background-image: url("images/007_fondo.jpg");
+}
+
+/*Tamaños*/
+.nada{background-color: darkorchid;}
+.alto{
+    background-color: crimson;
+    height: 100px;
+}
+.ancho{
+    background-color: darkgoldenrod;
+    width: 100px;
+}
+
+.tarjeta{
+    border-style: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 1px;
+    /*border-top: none;*/
+    /*Los pixeles del centro al darle inspeccionar 
+        significan el contenido y nos da su tamaño en pixeles*/
+    /*El padding es Arriba/Derecha/Abajo/Izquierda, es el espacio interno***/
+    padding: 10px 20px;
+    /*padding: 10px 20px 30px 40px;*/
+    margin: 10px 20px;
+}
+

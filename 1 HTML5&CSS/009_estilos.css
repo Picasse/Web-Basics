@@ -1,0 +1,42 @@
+.div-1,
+.div-2 {
+    background-color: blueviolet;
+    /*display:block; por defecto*/
+}
+
+.span-1{
+    background-color: aquamarine;
+    /*display: inline; por defecto*/
+    /*CON LOS INLINE TENEMOS ESTOS TRUQUITOS*/
+    float: left;
+}
+
+.span-2{
+    background-color: aquamarine;
+    /*display: inline; por defecto*/
+    /*CON LOS INLINE TENEMOS ESTOS TRUQUITOS*/
+    float: right;
+}
+
+.img{/*AGARRO TODAS LAS IMAGENES*/
+    width: 250px; 
+    height: 70px;
+    /*display: inline-block por defecto*/
+}
+/*DISPLAY FLEX ES MAS FUTURISTA Y MAS ASPERO JAJA*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

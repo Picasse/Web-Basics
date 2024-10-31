@@ -1,0 +1,70 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    /*Esta wea organiza las cosas wtf*/
+    background-color: yellow   ;
+    height: 300px;
+    /*Los posiciona en relacion al eje principal
+    que en este caso es la horizontal*/
+    justify-content: space-between;
+    /*Se renderiza mientras redimensionamos :o*/
+    flex-wrap: wrap;
+    /*Con nowrap se espicñan, pero no saltan de linea
+        wrap hace que conserven el tamaño, pero al reducir 
+            cambia la distribucion en pantalla*/
+    align-items: stretch; /*por defecto esta este, dimensiona a la altura del contenedor*/
+    align-items: center;
+    /*align-items: flex-start;*/
+    /*align-items: flex-end;*/
+    /*Usar codePen para experimentos*/
+}
+
+.contenido-1{
+    background-color: white;
+    /*height: 200px;*/
+    width: 100px;
+    border: 1px solid blue;
+}
+
+.contenido-2{
+    background-color: white;
+    /*height: 200px;*/
+    width: 100px;
+    border: 1px solid blue;
+}
+
+.contenido-3{
+    background-color: pink;
+    /*height: 200px;*/
+    width: 100px;
+    border: 1px solid blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

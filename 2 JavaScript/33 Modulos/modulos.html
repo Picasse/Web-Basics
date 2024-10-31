@@ -1,0 +1,45 @@
+<!--
+Nombre:
+Curso JavaScript: 33 Módulos (import/export)
+
+Tema:
+Modulos: Exportar e Importar js en html/js
+
+Funcionamiento:
+modulos.html llama a
+modulos.js que llama a
+constantes.js
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulos en Javascript</title>
+    <script src="./js/modulos.js" type="module"></script>
+    <!--1). Llamar al Modulo con la etiqueta script 
+            y le paso ruta y tipo:
+
+                src="carpeta/archivo.js"
+                type="module" 
+    -->
+    
+    <script src="./js/no-modulos.js" nomodule></script>
+    <!--2). Si el navegador es BIEN ANTIGUO (explorer) 
+            No va a entender: " type="module" "
+
+            nomodule:
+            *Explorer no lo detecta porque ni sabe que es
+            *El navegador moderno no carga doble vez el codigo 
+            (solo carga modulos.js)
+
+    3). constantes.js-->
+</head>
+<body>
+    <h1>Modulos en Js</h1>
+</body>
+</html>
+<!--
+Notas:
+
+-->

@@ -1,0 +1,64 @@
+.contenedor{
+    width: 300px;
+    height: 100 px;
+    background-color: aquamarine; /*Esta rezon pesa sobre...*/
+}
+div{
+    background-color: blue; /*Esta, ya que la Clase tiene más peso
+                                    y por eso el primer contenedor sigue 
+                                        aguamarina, tambien el 2do jeje*/
+}
+span.frase{
+    font-style: italic;
+}
+span.frase::before{
+    content: '<<'  ;
+    font-size: xx-small;
+}
+span.frase::after{
+    content: '>>'  ;
+    font-size: xx-small;
+}
+/*La clase libro, su fondo es color bisque*/
+.libro{
+    background-color: bisque;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Usando un pseudo elemento, quiero que todos los p de este libro
+     tengan la letra roja con un tamaño descomunal*/
+.libro p::first-letter{
+    font-size: 40pt;
+    color: red;
+    float: top;
+}/*La primera linea a travez del pseudoelemento first-line, aparece en azul*/
+.libro p::first-line{
+    font-size: 20pt;
+    color: blue;
+    float: top;
+}
+.libro p::selection{/*Cuando selecciono texto con el click derecho, 
+    puedo cambiar el color de fondo y de la letra*/
+    background-color: chocolate;
+    color: lime;
+}
+
+/*Dentro de la clase listado quiero que accedas al tag ul
+     ...y a todos los li que tengas pongalos rojo*/
+.listado ul li::marker{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

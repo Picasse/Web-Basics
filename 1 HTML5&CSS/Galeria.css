@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.caja{
+    padding: 10px;
+    margin: 10px;
+    color: blue;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aquamarine;
+    height: 150px;
+    width: 150px;
+    border: black 5px solid;
+}
+.flex-container{
+    display: flex;
+    background-color: blueviolet;
+    text-align: center;
+    text-shadow: 0.1cap 0.1cap 0.1cap;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

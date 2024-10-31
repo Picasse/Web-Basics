@@ -1,0 +1,57 @@
+h1 {
+    color: red;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    /*transform: matrix(1, -0.1, 0, 1, 0, 0);*/
+    display: flex;
+}
+
+p{
+    display: flex;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    border-top: 10px solid blue;
+    position:  bottom;
+    /*transform: matrix(1, 0.1, 0, 1, 0, 0);*/
+}
+
+#primera-noticia{/* 1.) SELECTOR POR ID*/
+    color: green;
+    font-size:40pt;
+}
+
+#segunda-noticia{
+    color: darkmagenta;
+    font-size:40pt;
+}
+
+.encabezado{/* 2.) SELECTOR POR CLASE*/
+    color: darkorange;
+    font-size:40pt;
+}
+
+*{/* 3.) SELECTOR UNIVERSAL, este le pega a todos por que es muy aspero B)*/
+    color: yellow;
+    font-size:40pt;
+}
+
+*.warning{/* 4.) Con este definimos el estilo aqui y luego podemos asignar un objeto 
+            a la clase para que se le pegue la propiedad ya definida*/
+    color : red;
+}
+
+.autor, .fecha, .ubicacion, h1, #segunda-noticia{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
