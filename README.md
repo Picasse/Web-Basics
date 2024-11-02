@@ -1,4 +1,4 @@
-<!--Fast Documentation
+Fast Documentation
 ////////////////////////
 //     SETUP:         //
 ////////////////////////
