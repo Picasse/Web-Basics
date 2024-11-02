@@ -31,7 +31,7 @@ span.frase::after{
     font-size: 40pt;
     color: red;
     float: top;
-}/*La primera linea a travez del pseudoelemento first-line, aparece en azul*/
+}/*La primera linea del parrafo con la clase .libre a travez del pseudoelemento first-line, aparece en azul*/
 .libro p::first-line{
     font-size: 20pt;
     color: blue;
@@ -46,7 +46,7 @@ span.frase::after{
 /*Dentro de la clase listado quiero que accedas al tag ul
      ...y a todos los li que tengas pongalos rojo*/
 .listado ul li::marker{
-    color: red;
+    color: rgb(251, 0, 255);
 }
 
 
